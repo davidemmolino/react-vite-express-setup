@@ -1,6 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useState } from "react";
+import TodoWrapper from "./components/Todo/TodoWrapper";
 
 function App() {
   const [data, setData] = useState();
@@ -17,6 +18,7 @@ function App() {
 
   return (
     <div className="App">
+      <TodoWrapper />
       <button onClick={getDataFromServer}>Access server using proxy</button>
       <p>data : {data}</p>
     </div>
